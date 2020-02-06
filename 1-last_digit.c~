@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * Main
+ *
+ * Return
+ */
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	ultimo = n % 10;
+	ultimo = abs(ultimo);
+	if (ultimo == 0)
+		printf("Last digit of %d is %d and is 0", ultimo);
+	else if (ultimo > 5)
+		printf("Last digit of %d is %d and is greater than 5", ultimo);
+	else if (ultimo < 6)
+		printf("Last digit of %d is %d and is less than 6 and not 0", ultimo);
+	return (0);
+}
